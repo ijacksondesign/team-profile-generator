@@ -1,3 +1,3 @@
-const Team = requirer('./lib/Team');
+const Team = require('./lib/Team');
 
-new Team();
+new Team().getManager();
