@@ -1,25 +1,8 @@
-function generateTeamMember(data) {
+const generateTeamMember = data => {
     data.forEach(member => {
         console.log(member);
-        function getRoleInfo() {
-            if (member === 'Manager') {
-                return `
-                <p class="card-text">Office number: ${member.officeNum}</p>
-                `
-            }
-            else if (member === 'Engineer') {
-                return `
-                <p class="card-text">GitHub: <a href="${member.getGithub()}" class="card-link">${member.github}</a></p>
-                `
-            }
-            else {
-                return `
-                <p class="card-text">School: ${member.school}</p>
-                `
-            }
-        } 
-        
-        return `
+
+        let card = `
         <div class="col"
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
@@ -27,14 +10,33 @@ function generateTeamMember(data) {
                     <h6 class="card-subtitle mb-2 text-muted">${member.getRole()}</h6>
                     <p class="card-text">ID: ${member.id}</p>
                     <a href="mailto:${member.email}" class="card-link">${member.email}</a>
-                    ${getRoleInfo()}
-                    <a href="#" class="card-link">Another link</a>
+                    ${getTeamRole(member)}
                 </div>
             </div>
         </div>
-        `
+        `;
+        console.log(card);
+        return card;
     })
-}
+};
+
+const getTeamRole = member => {
+    if (member.getRole() === 'Manager') {
+        return `
+                    <p class="card-text">Office number: ${member.officeNum}</p>
+        `;
+    }
+    else if (member.getRole() === 'Engineer') {
+        return `
+                    <p class="card-text">GitHub: <a href="${member.getGithub()}" class="card-link">${member.github}</a></p>
+        `;
+    }
+    else {
+        return `
+                    <p class="card-text">School: ${member.school}</p>
+        `;
+    }
+};
 
 function generatePage(data) {
     return `
@@ -47,7 +49,6 @@ function generatePage(data) {
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Team Profile</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -63,7 +64,7 @@ function generatePage(data) {
         </main>
     </body>
     </html>
-    `
-}
+    `;
+};
 
 module.exports = generatePage;
