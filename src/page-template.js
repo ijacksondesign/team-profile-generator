@@ -1,8 +1,6 @@
-const generateTeamMember = data => {
-    data.forEach(member => {
-        console.log(member);
-
-        let card = `
+const generateTeamMember = member => {
+    console.log(member);
+    return `
         <div class="col"
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
@@ -14,10 +12,7 @@ const generateTeamMember = data => {
                 </div>
             </div>
         </div>
-        `;
-        console.log(card);
-        return card;
-    })
+    `;
 };
 
 const getTeamRole = member => {
@@ -59,7 +54,7 @@ function generatePage(data) {
         </nav>
         <main>
             <div class="row row-cols-1 row-cols-md-2 g-4">
-                ${generateTeamMember(data)}
+                ${data.forEach(generateTeamMember)}
             </div>
         </main>
     </body>
