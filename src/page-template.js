@@ -1,34 +1,30 @@
 const generateTeamMember = member => {
     return `
-        <div class="col"
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">${member.name}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">${member.getRole()}</h6>
-                    <p class="card-text">ID: ${member.id}</p>
-                    <a href="mailto:${member.email}" class="card-link">${member.email}</a>
-                    ${getTeamRole(member)}
-                </div>
-            </div>
-        </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header bg-secondary text-white">
+                                <h5 class="card-title">${member.name}</h5>
+                                <h6 class="card-subtitle mb-2">${member.getRole()}</h6>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">ID: ${member.id}</p>
+                                <a href="mailto:${member.email}" class="card-link">${member.email}</a>
+                                ${getTeamRole(member)}
+                            </div>
+                        </div>
+                    </div>
     `;
 };
 
 const getTeamRole = member => {
     if (member.getRole() === 'Manager') {
-        return `
-                    <p class="card-text">Office number: ${member.officeNum}</p>
-        `;
+        return `<p class="card-text">Office number: ${member.officeNum}</p>`;
     }
     else if (member.getRole() === 'Engineer') {
-        return `
-                    <p class="card-text">GitHub: <a href="${member.getGithub()}" class="card-link">${member.github}</a></p>
-        `;
+        return `<p class="card-text">GitHub: <a href="${member.getGithub()}" class="card-link">${member.github}</a></p>`;
     }
     else {
-        return `
-                    <p class="card-text">School: ${member.school}</p>
-        `;
+        return `<p class="card-text">School: ${member.school}</p>`;
     }
 };
 
@@ -46,13 +42,13 @@ function generatePage(data) {
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+            <div class="container-fluid d-flex justify-content-center">
                 <a class="navbar-brand" href="#">My Team</a>
             </div>
         </nav>
         <main>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4 container-fluid d-flex justify-content-center">
                 ${data.map(generateTeamMember).join('')}
             </div>
         </main>
