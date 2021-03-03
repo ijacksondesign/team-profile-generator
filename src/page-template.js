@@ -1,5 +1,4 @@
 const generateTeamMember = member => {
-    console.log(member);
     return `
         <div class="col"
             <div class="card" style="width: 18rem;">
@@ -54,7 +53,7 @@ function generatePage(data) {
         </nav>
         <main>
             <div class="row row-cols-1 row-cols-md-2 g-4">
-                ${data.forEach(generateTeamMember)}
+                ${data.map(generateTeamMember).join('')}
             </div>
         </main>
     </body>
