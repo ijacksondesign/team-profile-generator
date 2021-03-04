@@ -10,7 +10,8 @@
 ## Description <a name="description"></a>
 A command-line application created using Node.js that takes user input about their software engineering team and generates an HTML page.
 
-<iframe src="https://drive.google.com/file/d/1zZErlHF2Q2G29mcMt-Guv94bQIBvLtqh/preview" width="640" height="480"></iframe>
+![Team Profile Generator](./screenshot/team-profile-generator.gif)
+[Click here to watch video](https://drive.google.com/file/d/1zZErlHF2Q2G29mcMt-Guv94bQIBvLtqh/preview)
 
 ## The Challenge <a name="challenge"></a>
 AS A manager I WANT to generate a webpage that displays my team's basic info SO THAT I have quick access to their emails and GitHub profiles
@@ -49,4 +50,4 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+SOFTWARE. 
