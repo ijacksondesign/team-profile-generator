@@ -21,7 +21,7 @@ const getTeamRole = member => {
         return `<p class="card-text">Office number: ${member.officeNum}</p>`;
     }
     else if (member.getRole() === 'Engineer') {
-        return `<p class="card-text">GitHub: <a href="${member.getGithub()}" class="card-link">${member.github}</a></p>`;
+        return `<p class="card-text">GitHub: <a href="${member.getGithub()} target="_blank" class="card-link">${member.github}</a></p>`;
     }
     else {
         return `<p class="card-text">School: ${member.school}</p>`;
