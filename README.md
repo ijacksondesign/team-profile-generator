@@ -10,7 +10,7 @@
 ## Description <a name="description"></a>
 A command-line application created using Node.js that takes user input about their software engineering team and generates an HTML page.
 
-<video width="720" src="https://drive.google.com/file/d/1zZErlHF2Q2G29mcMt-Guv94bQIBvLtqh/view?usp=sharing"></video> 
+<iframe src="https://drive.google.com/file/d/1zZErlHF2Q2G29mcMt-Guv94bQIBvLtqh/preview" width="640" height="480"></iframe>
 
 ## The Challenge <a name="challenge"></a>
 AS A manager I WANT to generate a webpage that displays my team's basic info SO THAT I have quick access to their emails and GitHub profiles
